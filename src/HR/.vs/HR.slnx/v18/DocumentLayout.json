@@ -1,12 +1,54 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "E:\\\u0421\u041F\u041E \u0443\u0447\u0435\u0431\u0430\\2 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\\u0430\\src\\HR\\",
-  "Documents": [],
+  "WorkspaceRootPath": "F:\\\u0421\u041F\u041E \u0443\u0447\u0435\u0431\u0430\\2 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\\u0430\\src\\HR\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{9CD4F7B8-CA9E-4588-83E0-D8C025E40B60}|Domain\\Domain.csproj|f:\\\u0441\u043F\u043E \u0443\u0447\u0435\u0431\u0430\\2 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\\u0430\\src\\hr\\domain\\department\\department.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9CD4F7B8-CA9E-4588-83E0-D8C025E40B60}|Domain\\Domain.csproj|solutionrelative:domain\\department\\department.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9CD4F7B8-CA9E-4588-83E0-D8C025E40B60}|Domain\\Domain.csproj|f:\\\u0441\u043F\u043E \u0443\u0447\u0435\u0431\u0430\\2 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\\u0430\\src\\hr\\domain\\department\\valueobject\\departmentidentifier.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9CD4F7B8-CA9E-4588-83E0-D8C025E40B60}|Domain\\Domain.csproj|solutionrelative:domain\\department\\valueobject\\departmentidentifier.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Department.cs",
+              "DocumentMoniker": "F:\\\u0421\u041F\u041E \u0443\u0447\u0435\u0431\u0430\\2 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\\u0430\\src\\HR\\Domain\\Department\\Department.cs",
+              "RelativeDocumentMoniker": "Domain\\Department\\Department.cs",
+              "ToolTip": "F:\\\u0421\u041F\u041E \u0443\u0447\u0435\u0431\u0430\\2 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\\u0430\\src\\HR\\Domain\\Department\\Department.cs",
+              "RelativeToolTip": "Domain\\Department\\Department.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-28T02:38:48.948Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "DepartmentIdentifier.cs",
+              "DocumentMoniker": "F:\\\u0421\u041F\u041E \u0443\u0447\u0435\u0431\u0430\\2 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\\u0430\\src\\HR\\Domain\\Department\\ValueObject\\DepartmentIdentifier.cs",
+              "RelativeDocumentMoniker": "Domain\\Department\\ValueObject\\DepartmentIdentifier.cs",
+              "ToolTip": "F:\\\u0421\u041F\u041E \u0443\u0447\u0435\u0431\u0430\\2 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\\u0430\\src\\HR\\Domain\\Department\\ValueObject\\DepartmentIdentifier.cs",
+              "RelativeToolTip": "Domain\\Department\\ValueObject\\DepartmentIdentifier.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-28T02:38:07.195Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }
