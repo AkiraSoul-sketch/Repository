@@ -8,7 +8,7 @@ namespace Domain.Department
 {
     public class Department
     {
-        public Department(DepartmentId id, DepartmentId parentid, NotEmptyName name, DepartmentIdentifier identifier, DepartmentPath path, DepartmentDepth depth, EntityLifeTime lifeTime)
+        public Department(DepartmentId id, DepartmentId parentid, NotEmptyName name, DepartmentIdentifier identifier, DepartmentPath path, Depth depth, EntityLifeTime lifeTime)
         {
             Id = id;
             ParentId = parentid;
@@ -23,7 +23,7 @@ namespace Domain.Department
         public NotEmptyName Name { get; }
         public DepartmentIdentifier Identifier { get; }
         public DepartmentPath Path { get; }
-        public DepartmentDepth Depth { get; }
+        public Depth Depth { get; }
         public EntityLifeTime LifeTime { get; }
     }
 }

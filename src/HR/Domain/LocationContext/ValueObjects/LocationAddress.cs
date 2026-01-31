@@ -22,17 +22,19 @@ namespace Domain.LocationContext.ValueObjects
             if (string.IsNullOrWhiteSpace(value))
                 throw new ArgumentException("Адрес локации не может быть пустым", nameof(value));
 
-            List<string> parts = 
-             [
+            List<string> parts =
+            [
                 .. value
                     .Split(',')
                     .Select(part => part.Trim())
-                    .Where(part  => !string.IsNullOrWhiteSpace(part))
-             ];
+                    .Where(part => !string.IsNullOrWhiteSpace(part)),
+            ];
 
             if (parts.Count == 0)
                 throw new ArgumentException(
-                    "Адрес локации должен содержать хотя бы одну часть.", nameof(value));
+                    "Адрес локации должен содержать хотя бы одну часть.",
+                    nameof(value)
+                );
 
             return new LocationAddress(parts);
         }
@@ -40,15 +42,23 @@ namespace Domain.LocationContext.ValueObjects
         public static LocationAddress Create(IEnumerable<string> parts)
         {
             if (!parts.Any())
-                throw new ArgumentException("Адрес локации должен содержать хотя бы одну часть." nameof(parts));
+                throw new ArgumentException(
+                    "Адрес локации должен содержать хотя бы одну часть.",
+                    nameof(parts)
+                );
 
-            List<string> trimmedParts = 
-                [
-                .. parts.Select(part => part.Trim()).Where(part => !string.IsNullOrWhiteSpace(part))
-                ];
+            List<string> trimmedParts =
+            [
+                .. parts
+                    .Select(part => part.Trim())
+                    .Where(part => !string.IsNullOrWhiteSpace(part)),
+            ];
 
             if (trimmedParts.Count == 0)
-                throw new ArgumentException("Адрес локации должен содержать хотя бы одну часть.", nameof(parts));
+                throw new ArgumentException(
+                    "Адрес локации должен содержать хотя бы одну часть.",
+                    nameof(parts)
+                );
 
             return new LocationAddress(trimmedParts);
         }

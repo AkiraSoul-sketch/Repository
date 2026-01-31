@@ -4,20 +4,23 @@ using System.Text;
 
 namespace Domain.Department.ValueObject
 {
-    public class DepartmentDepth
+    public record Depth
     {
         public short Value { get; }
-        private DepartmentDepth(short value)
+
+        private Depth(short value)
         {
-            Value = value;
+            this.Value = value;
         }
-        public static DepartmentDepth Create(short value)
+
+        public static Depth Create(short value)
         {
             if (value < 1)
             {
                 throw new ArgumentException("Глубина не может быть отрицательной.", nameof(value));
             }
-            return new DepartmentDepth(value);
+
+            return new Depth(value);
         }
     }
 }
