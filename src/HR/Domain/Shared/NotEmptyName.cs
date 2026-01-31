@@ -19,13 +19,22 @@ namespace Domain.Shared
         public static NotEmptyName Create(string value)
         {
             if (string.IsNullOrWhiteSpace(value))
-                throw new ArgumentNullException("Название локации не может быть пустым", nameof(value));
+                throw new ArgumentNullException(
+                    nameof(value),
+                    "Название локации не может быть пустым"
+                );
 
             if (value.Length > MaxLength)
-                throw new ArgumentOutOfRangeException($"Название локации не может превышать {MaxLength} символовю", nameof(value));
+                throw new ArgumentOutOfRangeException(
+                    nameof(value),
+                    $"Название локации не может превышать {MaxLength} символовю"
+                );
 
             if (value.Length < MinLength)
-                throw new ArgumentOutOfRangeException($"Название локации должно быть от {MinLength} до {MaxLength} символовю", nameof(value));
+                throw new ArgumentOutOfRangeException(
+                    nameof(value),
+                    $"Название локации должно быть от {MinLength} до {MaxLength} символовю"
+                );
 
             return new NotEmptyName(value);
         }

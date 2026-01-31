@@ -12,10 +12,11 @@ namespace Domain.Position.ValueObject
         {
             Value = value;
         }
+
         public static PositionDescription Create(string value)
         {
             if (string.IsNullOrWhiteSpace(value))
-                throw new ArgumentNullException("Значение было пустым.", nameof(value));
+                throw new ArgumentNullException(nameof(value), "Значение было пустым.");
 
             if (value.Length > 500)
                 throw new ArgumentException("Строка привышает длину символов.", nameof(value));
