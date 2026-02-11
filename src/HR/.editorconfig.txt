@@ -5,7 +5,8 @@ indent_size = 4
 tab_width = 4
 max_line_length = 120
 use_tabs = false
-
+dotnet_diagnostic.ca1062.severity = none # Не требовать проверку аргументов на null
+dotnet_diagnostic.CA1062.severity = none # Не требовать проверку аргументов на null
 dotnet_diagnostic.SA1642.severity = none
 dotnet_diagnostic.CA1016.severity = none # Не требовать наличие атрибута AssemblyVersion
 dotnet_diagnostic.CA2007.severity = none # Не требовать использования ConfigureAwait при await
@@ -131,7 +132,7 @@ dotnet_diagnostic.CS4014.severity = error # Неожиданно неожида�
 dotnet_diagnostic.CA1308.severity = error # Не использовать ToLower(), использовать ToLowerInvariant()
 dotnet_diagnostic.CA1309.severity = error # Использовать StringComparison при сравнении строк
 dotnet_diagnostic.CA1065.severity = error # Не выбрасывать NotImplementedException/NotSupportedException в конструкторах
-dotnet_diagnostic.CA1062.severity = none # Не требовать проверку аргументов на null
+
 
 # Microsoft .NET properties
 csharp_new_line_before_members_in_object_initializers = false # Не добавлять новую строку перед членами в инициализаторах объектов

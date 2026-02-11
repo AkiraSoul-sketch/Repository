@@ -1,15 +1,21 @@
-﻿using Domain.LocationContext.ValueObjects;
-using Domain.Shared;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Net;
 using System.Text;
+using Domain.LocationContext.ValueObjects;
+using Domain.Shared;
 
 namespace Domain.LocationContext
 {
     public class Location
     {
-        public Location(LocationId id, NotEmptyName name, LocationAddress address, EntityLifeTime lifeTime, IanaTimeZone timeZone)
+        public Location(
+            LocationId id,
+            LocationName name,
+            LocationAddress address,
+            EntityLifeTime lifeTime,
+            IanaTimeZone timeZone
+        )
         {
             Id = id;
             Name = name;
@@ -17,10 +23,23 @@ namespace Domain.LocationContext
             LifeTime = lifeTime;
             TimeZone = timeZone;
         }
+
         public LocationId Id { get; }
-        public NotEmptyName Name { get; }
+        public LocationName Name { get; }
         public LocationAddress Address { get; }
-        public EntityLifeTime LifeTime { get; }
-        public IanaTimeZone TimeZone { get; }
+        public EntityLifeTime LifeTime { get; set; }
+        public IanaTimeZone TimeZone { get; set; }
+
+        public void ChangeIanaTimeZone(IanaTimeZone newname)
+        {
+            if (LifeTime.IsActivate == false)
+            {
+                throw new InvalidOperationException("Объект удален");
+            }
+
+            TimeZone = newname;
+
+            LifeTime = LifeTime.Update();
+        }
     }
 }

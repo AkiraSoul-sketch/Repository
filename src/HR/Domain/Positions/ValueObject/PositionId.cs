@@ -1,26 +1,27 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using Domain.LocationContext.ValueObjects;
 
-namespace Domain.LocationContext.ValueObjects
+namespace Domain.Positions.ValueObject
 {
-	public sealed record LocationId
+	public sealed record PositionId
 	{
-		Guid Value { get; }
+		public Guid Value { get; }
 
-		private LocationId(Guid value)
+		private PositionId(Guid value)
 		{
 			Value = value;
 		}
 
-		public static LocationId Create(Guid value)
+		public static PositionId Create(Guid value)
 		{
 			if (value == Guid.Empty)
 			{
 				throw new ArgumentNullException(nameof(value), "Идентификатор не может быть пустым.");
 			}
 
-			return new LocationId(value);
+			return new PositionId(value);
 		}
 	}
 }

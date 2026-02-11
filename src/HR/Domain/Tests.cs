@@ -4,7 +4,5 @@ using System.Text;
 
 namespace Domain
 {
-    internal class Tests
-    {
-    }
+    internal class Tests { }
 }

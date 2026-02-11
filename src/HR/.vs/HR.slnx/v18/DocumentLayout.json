@@ -1,10 +1,10 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "F:\\\u0421\u041F\u041E \u0443\u0447\u0435\u0431\u0430\\2 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\\u0430\\src\\HR\\",
+  "WorkspaceRootPath": "C:\\Users\\acer\\Desktop\\Company Project\\src\\HR\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{9CD4F7B8-CA9E-4588-83E0-D8C025E40B60}|Domain\\Domain.csproj|f:\\\u0441\u043F\u043E \u0443\u0447\u0435\u0431\u0430\\2 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\\u0430\\src\\hr\\domain\\position\\view.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9CD4F7B8-CA9E-4588-83E0-D8C025E40B60}|Domain\\Domain.csproj|solutionrelative:domain\\position\\view.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9CD4F7B8-CA9E-4588-83E0-D8C025E40B60}|Domain\\Domain.csproj|c:\\users\\acer\\desktop\\company project\\src\\hr\\domain\\department\\department.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9CD4F7B8-CA9E-4588-83E0-D8C025E40B60}|Domain\\Domain.csproj|solutionrelative:domain\\department\\department.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -19,14 +19,15 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "View.cs",
-              "DocumentMoniker": "F:\\\u0421\u041F\u041E \u0443\u0447\u0435\u0431\u0430\\2 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\\u0430\\src\\HR\\Domain\\Position\\View.cs",
-              "RelativeDocumentMoniker": "Domain\\Position\\View.cs",
-              "ToolTip": "F:\\\u0421\u041F\u041E \u0443\u0447\u0435\u0431\u0430\\2 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\\u0430\\src\\HR\\Domain\\Position\\View.cs",
-              "RelativeToolTip": "Domain\\Position\\View.cs",
-              "ViewState": "AgIAABwAAAAAAAAAAAAgwDEAAAA0AAAAAAAAAA==",
+              "Title": "Department.cs",
+              "DocumentMoniker": "C:\\Users\\acer\\Desktop\\Company Project\\src\\HR\\Domain\\Department\\Department.cs",
+              "RelativeDocumentMoniker": "Domain\\Department\\Department.cs",
+              "ToolTip": "C:\\Users\\acer\\Desktop\\Company Project\\src\\HR\\Domain\\Department\\Department.cs",
+              "RelativeToolTip": "Domain\\Department\\Department.cs",
+              "ViewState": "AgIAAG0AAAAAAAAAAAAUwGoAAABDAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-29T04:37:39.215Z",
+              "WhenOpened": "2026-02-10T02:04:15.416Z",
+              "IsPinned": true,
               "EditorCaption": ""
             }
           ]
