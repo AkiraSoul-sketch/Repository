@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using Domain.Shared;
 
-namespace Domain.Department.ValueObject
+namespace Domain.Departments.ValueObject
 {
 	public class DepartmentName
 	{

@@ -1,8 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using Domain.Department.ValueObject;
 
-namespace Domain.Department.ValueObject
+namespace Domain.Departments.ValueObject
 {
     public record DepartmentDepth
     {

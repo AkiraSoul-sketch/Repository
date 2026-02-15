@@ -32,7 +32,7 @@ namespace Domain.LocationContext
 
         public void ChangeIanaTimeZone(IanaTimeZone newname)
         {
-            if (LifeTime.IsActivate == false)
+            if (!LifeTime.IsActive)
             {
                 throw new InvalidOperationException("Объект удален");
             }

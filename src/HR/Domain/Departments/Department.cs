@@ -1,9 +1,12 @@
-﻿using Domain.Department.ValueObject;
+﻿using Domain.Departments.ValueObject;
+using Domain.LocationContext.ValueObjects;
 using Domain.LocationContext;
+using Domain.ManyToMany;
 using Domain.Positions;
 using Domain.Shared;
 
-namespace Domain.Department
+
+namespace Domain.Departments
 {
 	public class Department
 	{
@@ -14,6 +17,9 @@ namespace Domain.Department
 		public DepartmentPath Path { get; }
 		public DepartmentDepth Depth { get; }
 		public EntityLifeTime LifeTime { get; set; }
+		private readonly List<Department> departments = [];
+		private readonly List<DepartmentPosition> DepartmentPosition = [];
+		private readonly List<DepartmentLocation> locations = [];
 
 		public Department(
 			DepartmentId id,
@@ -91,52 +97,65 @@ namespace Domain.Department
 			return false;
 		}
 
-		private readonly List<Position> positions = [];
+		public static Department CreateChild(Department parent, DepartmentName name, DepartmentIdentifier identifier)
+		{
+			DepartmentId id = DepartmentId.Create();
+			DepartmentPath path = DepartmentPath.Create(parent.Path.Value + "/" + identifier.Value);
+			DepartmentDepth depth = DepartmentDepth.CalculateFromPath(path);
+			EntityLifeTime lifetime = EntityLifeTime.Create(
+				createdAt: DateTime.UtcNow,
+				updatedAt: DateTime.UtcNow,
+				isActive: true
+			);
+			return new Department(id, parentid: parent.Id, name, identifier, path, depth, lifetime);
+		}
+
+		public void AddChild(Department child)
+		{
+			if (IsChildOf(child))
+			{
+				throw new InvalidOperationException("Объект уже является дочерним объектом");
+			}
+			if (child.ParentId != null)
+			{
+				throw new InvalidOperationException("Объект не является дочерним объектом");
+			}
+
+			departments.Add(child);
+		}
 
 		public void AddPosition(Position position)
 		{
-			foreach (Position p in positions)
+			ArgumentNullException.ThrowIfNull(position);
+
+			if (DepartmentPosition.Any(dp => dp.PositionId == position.Id))
 			{
-				if (p.Name == position.Name)
-				{
-					throw new ArgumentException("Подобное название позиции уже существуетю");
-				}
-
-				if (p.Id == position.Id)
-				{
-					throw new ArgumentException("Данная позиция уже существует.");
-				}
+				throw new InvalidOperationException("Данная позиция уже существует.");
 			}
-			positions.Add(position);
 
-			LifeTime = LifeTime.Update();
+			DepartmentPosition.Add(new DepartmentPosition(
+				departmentid: Id,
+                positionid: position.Id,
+                department: this,
+                position: position
+            ));
 		}
 
-		private readonly List<Location> offices = [];
-
-		public void AddOffice(Location office)
+		public void AddLocation(Location location)
 		{
-			foreach (Location p in offices)
+			ArgumentNullException.ThrowIfNull(location);
+			
+			if (locations.Any(l => l.LocationId == location.Id))
 			{
-				if (p.Name == office.Name)
-				{
-					throw new ArgumentException("Название данной локации уже есть в базе.");
-				}
-
-				if (p.Address == office.Address)
-				{
-					throw new ArgumentException("Данный адрес уже есть в базе.");
-				}
-
-				if (p.Id == office.Id)
-				{
-					throw new ArgumentException("Данная локация уже есть в базе.");
-				}
+				throw new InvalidOperationException("Данная локация уже существует.");
 			}
 
-			offices.Add(office);
-
-			LifeTime = LifeTime.Update();
+			locations.Add(new DepartmentLocation(
+				Departmentid: Id,
+				LocationId: location.Id,
+				location: location,
+				department: this
+			));
 		}
 	}
 }

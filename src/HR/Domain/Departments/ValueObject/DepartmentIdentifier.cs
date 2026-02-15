@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Domain.Department.ValueObject
+namespace Domain.Departments.ValueObject
 {
 	public class DepartmentIdentifier
 	{
